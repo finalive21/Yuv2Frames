@@ -29,55 +29,6 @@ function [y, u, v] = yuvRead(vid, width, height, nFrame)
 %           nFrame 	:   Number of frames
 % 
 % Outputs:
-%           Y U V	:  	Y, U and V components of the video
-% 
-% 
-% 
-% 
-% A notation called the "A:B:C" notation is used to describe how often U 
-% and V are sampled relative to Y:
-% 4:2:0 means 2:1 horizontal downsampling, with 2:1 vertical downsampling.
-% 
-% 
-% Some examples:
-% 
-% CIF = 352 x 288 luma resolution with 4:2:0 chroma subsampling.
-% 
-%            352
-%      +-------------+
-%      |             |
-%      |      Y      | 288
-%      |             |
-%      |             |
-%      +-------------+
-%        176
-%      +------+
-%      |  U   |
-%      |      |144
-%      +------+
-%      |  V   |
-%      |      |144
-%      +------+
-% 
-% 
-% QCIF = 176 x 144 luma resolution with 4:2:0 chroma subsampling.
-% 
-%            176
-%      +-------------+
-%      |             |
-%      |      Y      | 144
-%      |             |
-%      |             |
-%      +-------------+
-%        88
-%      +------+
-%      |  U   |
-%      |      |72
-%      +------+
-%      |  V   |
-%      |      |72
-%      +------+
-% 
 % 
 % (C)	Mohammad Haghighat, University of Miami
 %       haghighat@ieee.org
