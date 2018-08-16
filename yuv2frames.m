@@ -12,8 +12,8 @@ field2 = 'frame';
 field3 = 'dim';
 
 %creo una estructura anidada vacia con campos ya definidos
-field3_1 = 'width';
-field3_2 = 'height';
+field3_1 = 'x';
+field3_2 = 'y';
 value3 = struct(field3_1,{},field3_2,{});
 
 %creo una estructura vacia con campos ya definidos
@@ -24,7 +24,7 @@ frames = struct(field1,{},field2,{},field3,value3);
 videoSequence = 'akiyo_qcif.yuv';
 width  = 176;
 height = 144;
-nFrame = 300;
+nFrame = 100;
 
 % Lectura de la secuencia de video
 [Y,U,V] = yuvRead(videoSequence, width, height ,nFrame); 
@@ -36,7 +36,7 @@ nFrame = 300;
 for i=1:nFrame
     frames(i).name = ['Frame ' num2str(i)];
     frames(i).frame = Y(:,:,i);
-    frames(i).dim.width = width;
-    frames(i).dim.height = height;
+    frames(i).dim.x = width;
+    frames(i).dim.y = height;
 end
 
