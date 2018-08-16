@@ -1,0 +1,8 @@
+%% Extraer bloque
+
+
+x = frames(1).quad.d1(5,1);
+y = frames(1).quad.d1(5,2)
+imagen = frames(1).frame(x:x+63,y:y+63);
+figure, imshow(imagen);
+

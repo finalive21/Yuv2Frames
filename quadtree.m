@@ -1,3 +1,6 @@
+
+%% Codigo del particionamiento usando qtdecomp
+
 A=imresize(frames(1).frame,[512 512]);
 qA=qtdecomp(A,0.20,[8 64]);
 blocks = repmat(uint8(0),size(qA));
@@ -15,3 +18,11 @@ blocks(end,1:end) = 1;
 blocks(1:end,end) = 1;
 
 figure,imshow(blocks,[]);
+
+
+
+
+
+
+
+
